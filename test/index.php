@@ -1,52 +1,47 @@
 <?php
-session_start();
-include 'includes/session.php';
-include 'includes/functions.php';
-include 'includes/commands.php';
-include 'includes/products.php';
+// index.php
+// Entry point for Commodoreblue.com TEST directory
+// Purpose: This file handles the main homepage logic and outputs HTML content for testing.
 
-// Initialize output
-$output = "";
+///////////////////////////////////////////////
+// 1. START SESSION
+///////////////////////////////////////////////
+session_start(); // Start a session to manage user data.
 
-// Handle actions and commands
-if (isset($_POST['action']) && $_POST['action'] === 'toggleView') {
-    $_SESSION['viewMode'] = ($_SESSION['viewMode'] === 'LIST') ? 'THUMBNAIL' : 'LIST';
+///////////////////////////////////////////////
+// 2. INCLUDE CONFIGURATION FILES
+///////////////////////////////////////////////
+require_once '../config.php'; // Include site configuration.
+
+///////////////////////////////////////////////
+// 3. HANDLE USER AUTHENTICATION
+///////////////////////////////////////////////
+if (!isset($_SESSION['user'])) {
+    // Redirect to login page if user is not authenticated
+    header("Location: ../login.php");
+    exit();
 }
 
-if (isset($_POST['action']) && $_POST['action'] === 'autorun') {
-    $_POST['command'] = 'RUN';
-}
+///////////////////////////////////////////////
+// 4. PAGE CONTENT LOGIC
+///////////////////////////////////////////////
+// Load dynamic content for homepage
+$page_title = "Commodoreblue TEST Environment";
+$welcome_message = "Welcome to the test environment for Commodoreblue!";
 
-if (isset($_POST['action']) && $_POST['action'] === 'autolist') {
-    $_POST['command'] = 'LIST';
-}
-
-if (isset($_POST['command'])) {
-    $inputCmd = strtoupper(trim($_POST['command']));
-    $output = handleCommand($inputCmd, $pages, $products);
-}
+///////////////////////////////////////////////
+// 5. OUTPUT HTML
+///////////////////////////////////////////////
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>COMMODORE BASIC NAVIGATION TEST</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo $page_title; ?></title>
 </head>
 <body>
-    <h1>COMMODORE BASIC NAVIGATION TEST</h1>
-    <div id="display"><?php echo $output; ?></div>
-
-    <form method="post">
-        <input type="text" name="command" autofocus>
-        <button type="submit">ENTER</button>
-    </form>
-    <form method="post">
-        <input type="hidden" name="action" value="toggleView">
-        <button type="submit">TOGGLE VIEW MODE (CURRENT: <?php echo $_SESSION['viewMode']; ?>)</button>
-    </form>
-
-    <p>HINTS: TRY 'LIST', 'LOAD HOME', 'LOAD EMU', 'HELP'.</p>
+    <h1><?php echo $page_title; ?></h1>
+    <p><?php echo $welcome_message; ?></p>
 </body>
 </html>
