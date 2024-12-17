@@ -1,0 +1,16 @@
+Output dir: C:\Users\Rony Soussan\Documents\commodoreblueWEB\commodoreblue.com\test\includes\bin
+User Arguments: afo=true
+parsing
+Got 4 errors and 0 warnings while executing:
+  (C:\Users\Rony Soussan\Documents\commodoreblueWEB\commodoreblue.com\test\includes\functions.php 1:1) Error: Invalid token
+  (C:\Users\Rony Soussan\Documents\commodoreblueWEB\commodoreblue.com\test\includes\functions.php 2:20) Error: Syntax error
+  (C:\Users\Rony Soussan\Documents\commodoreblueWEB\commodoreblue.com\test\includes\functions.php 6:21) Error: Syntax error
+  (C:\Users\Rony Soussan\Documents\commodoreblueWEB\commodoreblue.com\test\includes\functions.php 13:24) Error: Syntax error
+
+<?php
+^
+
+Error: Invalid token
+at line 1, column 1 in functions.php
+
+

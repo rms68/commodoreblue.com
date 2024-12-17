@@ -1,47 +1,56 @@
 <?php
-// index.php
-// Entry point for Commodoreblue.com TEST directory
-// Purpose: This file handles the main homepage logic and outputs HTML content for testing.
+require_once __DIR__ . '/includes/session.php';
+require_once __DIR__ . '/includes/products.php';
+require_once __DIR__ . '/includes/functions.php';
+require_once __DIR__ . '/includes/commands.php';
 
-///////////////////////////////////////////////
-// 1. START SESSION
-///////////////////////////////////////////////
-session_start(); // Start a session to manage user data.
+$output = "";
 
-///////////////////////////////////////////////
-// 2. INCLUDE CONFIGURATION FILES
-///////////////////////////////////////////////
-require_once '../config.php'; // Include site configuration.
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $inputCmd = strtoupper(trim($_POST['command'] ?? ''));
 
-///////////////////////////////////////////////
-// 3. HANDLE USER AUTHENTICATION
-///////////////////////////////////////////////
-if (!isset($_SESSION['user'])) {
-    // Redirect to login page if user is not authenticated
-    header("Location: ../login.php");
-    exit();
+    if ($inputCmd === 'LIST') {
+        $output = generateListItems($pages, $products);
+    } elseif ($inputCmd === 'RUN') {
+        $output = runItem($products);
+    } elseif (strpos($inputCmd, 'LOAD') === 0) {
+        $item = parseLoadCommand($inputCmd);
+        if (in_array($item, $pages)) {
+            $_SESSION['loadedItem'] = $item;
+            $output = "LOADED \"$item\". TYPE RUN TO START.";
+        } else {
+            foreach ($products as $p) {
+                if (strtolower($p['name']) === strtolower($item)) {
+                    $_SESSION['loadedItem'] = $p;
+                    $output = "LOADED \"" . c64_upper($p['name']) . "\". TYPE RUN TO START.";
+                    break;
+                }
+            }
+        }
+    } else {
+        $output = "SYNTAX ERROR. TYPE HELP FOR OPTIONS.";
+    }
 }
-
-///////////////////////////////////////////////
-// 4. PAGE CONTENT LOGIC
-///////////////////////////////////////////////
-// Load dynamic content for homepage
-$page_title = "Commodoreblue TEST Environment";
-$welcome_message = "Welcome to the test environment for Commodoreblue!";
-
-///////////////////////////////////////////////
-// 5. OUTPUT HTML
-///////////////////////////////////////////////
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $page_title; ?></title>
+    <title>COMMODORE BASIC NAVIGATION TEST</title>
+    <style>
+        body { background: #000; color: #0f0; font-family: 'Courier New', monospaloce; padding: 20px; }
+        pre { white-space: pre-wrap; }
+        input, button { background: #222; color: #0f0; border: 1px solid #0f0; padding: 5px; }
+        button:hover { background-color: #0f0; color: #000; }
+    </style>
 </head>
 <body>
-    <h1><?php echo $page_title; ?></h1>
-    <p><?php echo $welcome_message; ?></p>
+    <h1>COMMODORE BASIC NAVIGATION dfdfdTEST</h1>
+    <pre><?php echo $output; ?></pre>
+    <form method="post">
+        <input type="text" name="command" autofocus placeholder="Type command...">
+        <button type="submit">ENTER</button>
+    </form>
+    <p>HINTS: TRY 'LIST', 'LOAD HOME', 'LOAD SHOP', 'LOAD EMU', 'HELP'</p>
 </body>
 </html>
