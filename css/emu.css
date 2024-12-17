@@ -1,0 +1,135 @@
+/* emu.css
+   Styles specific to the EMU page.
+   Three columns top row (33% each), centered content, full-width second row for retro window.
+*/
+
+#emu-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+#emu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+}
+
+#emu-content > div:first-child {
+    /* Top row with 3 columns */
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Column common styling */
+#emu-content > div:first-child > div {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Game list column */
+#emu-content > div:first-child > div:nth-child(1) {
+    justify-content: flex-start;
+}
+
+#emu-content > div:first-child > div:nth-child(1) > div {
+    background:#000033;
+    border:2px solid #7c71da;
+    padding:10px;
+    width:90%;
+    height:300px;
+    overflow:auto;
+    font-size:1vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:flex-start;
+}
+
+#emu-content ul li a.game-link {
+    color:#fff;
+    background:#000044;
+    padding:3px 6px;
+    border:1px solid #333;
+    border-radius:4px;
+    display:inline-block;
+    font-size:1vh;
+    margin:5px 0;
+    text-align:center;
+}
+
+/* Emulator column */
+#emu-content > div:first-child > div:nth-child(2) {
+    /* Just center the canvas */
+    justify-content:center;
+}
+
+#emulatorContainer {
+    background:#000; 
+    border:3px solid #333;
+}
+
+/* Reset + Table column */
+#emu-content > div:first-child > div:nth-child(3) {
+    justify-content:flex-start;
+}
+
+/* The table inside the third column */
+#emu-content > div:first-child > div:nth-child(3) h1 {
+    color:#6f8fff; 
+    margin:5px 0; 
+    font-size:1vh;
+}
+
+#emu-content > div:first-child > div:nth-child(3) p {
+    color:#fff; 
+    font-size:1vh;
+    text-align:center;
+}
+
+#emu-content > div:first-child > div:nth-child(3) > div {
+    display:flex; 
+    flex-wrap:wrap; 
+    justify-content:center; 
+    align-items:center; 
+    width:90%;
+}
+
+/* Retro window full width on second row */
+#emu-content > div:nth-child(2) {
+    margin-top:10px; 
+    background:#000033; 
+    padding:10px; 
+    height:200px; 
+    overflow-y:auto; 
+    box-sizing:border-box; 
+    width:100%;
+}
+
+#emu-content h3 {
+    color:#6f8fff; 
+    margin:5px 0;
+}
+
+#retroWindow {
+    background:#0000AA; 
+    color:#fff; 
+    font-family:'Courier New', monospace; 
+    font-size:14px; 
+    padding:5px; 
+    margin-top:5px; 
+    height:150px; 
+    overflow-y:auto; 
+    border:1px solid #333; 
+    line-height:1.2em; 
+    white-space:pre-wrap;
+}

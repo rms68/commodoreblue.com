@@ -1,0 +1,12 @@
+type,product_name,PRICE,PLAYABLE,roms,MEDIA,product_description,product_category_1
+product,ACEOFACES,25,TRUE,\emu\ROMS\,https://d2j6dbq0eux0bg.cloudfront.net/images/108400041/4678629693.jpg,TEMP DESCRIPTION,GAMES
+product,AFTERBURNER,25,TRUE,\emu\ROMS\,https://d2j6dbq0eux0bg.cloudfront.net/images/108400041/4678634776.jpg,TEMP DESCRIPTION,GAMES
+product,ARCHON,25,TRUE,\emu\ROMS\,https://d2j6dbq0eux0bg.cloudfront.net/images/108400041/4678633815.jpg,TEMP DESCRIPTION,GAMES
+product,ARKANOID,25,TRUE,\emu\ROMS\,https://d2j6dbq0eux0bg.cloudfront.net/images/108400041/4678629735.jpg,TEMP DESCRIPTION,GAMES
+product,BATMAN,25,TRUE,\emu\ROMS\,https://d2j6dbq0eux0bg.cloudfront.net/images/108400041/4678634866.jpg,TEMP DESCRIPTION,GAMES
+product,BATMAN CAPED CRUSADER,25,TRUE,\emu\ROMS\,https://d2j6dbq0eux0bg.cloudfront.net/images/108400041/4678633905.jpg,TEMP DESCRIPTION,GAMES
+product,BLUE commodore64,2000,FALSE,FALSE,https://d2j6dbq0eux0bg.cloudfront.net/images/108400041/4675993605.png,TEMP DESCRIPTION,BUNDLES
+product,BOARD,2000,FALSE,FALSE,https://d2j6dbq0eux0bg.cloudfront.net/images/108400041/4675991736.jpg,TEMP DESCRIPTION,UPGRADES
+product,ORANGE commodore64,2000,FALSE,FALSE,https://d2j6dbq0eux0bg.cloudfront.net/images/108400041/4675994557.png,TEMP DESCRIPTION,BUNDLES
+product,RED commodore64,2000,FALSE,FALSE,https://d2j6dbq0eux0bg.cloudfront.net/images/108400041/4675993617.png,TEMP DESCRIPTION,BUNDLES
+product,SD2IEC,2000,FALSE,FALSE,https://d2j6dbq0eux0bg.cloudfront.net/images/108400041/4675997271.png,TEMP DESCRIPTION,UPGRADES

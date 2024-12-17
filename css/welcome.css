@@ -1,0 +1,18 @@
+/* welcome.css
+   Styles only for the welcome (landing) page, controlling the initial loading/flashing.
+   Keep it minimal and only relevant to the welcome-page.
+*/
+#welcome-page {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    /* Add any special styling needed for the welcome sequence */
+}
+
+#load-output {
+    font-family: 'C64 Pro', monospace;
+    color: #ffffff;
+    font-size: 2vh;
+    margin: 20px;
+}

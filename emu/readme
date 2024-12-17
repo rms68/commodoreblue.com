@@ -1,0 +1,30 @@
+
+ This is precompiled binary of the PETCAT v2.01 from the VICE 0.10 emulator
+ package. Compiled for DOS protected mode.
+
+ Full C source code is available on sites carrying the VICE. Look for files
+
+	vice-xxx.tar.gz
+  or	petcat-2.01.tar.gz
+
+
+ Description
+
+     petcat converts input files from the most	common	CBM  file
+     formats  into  printable  ASCII  form and writes to standard
+     output. The type of input file is determined  automatically,
+     if	possible, and appropriate conversion is	performed.  Since
+     a few of the  BASIC  versions  have  keywords  defined  dif-
+     ferently,	the  right  conversion	has to be selected on the
+     command line.  Where such confusion cannot	happen,	automati-
+     cal  recognition  of  input  is  used.  This  is useful when
+     expanding several files at	once or	if the	program	 contains
+     code   for	 several  versions,  selected  according  to  the
+     hardware; eg. Simon's Basic vs. Basic 7.0.
+
+
+
+  // jopi@stekt.oulu.fi
+
+
+

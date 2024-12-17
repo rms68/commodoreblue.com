@@ -1,0 +1,41 @@
+Reminders for Precise Code Integration
+Targeted Modification Only:
+
+Instruction: "Please modify only the specified section of the code without altering any other parts."
+Purpose: Ensures that only the intended part of the code is changed.
+No Additional Changes:
+
+Instruction: "Do not add, remove, or alter any code outside the area specified for modification."
+Purpose: Prevents unintended edits to other parts of the codebase.
+Preserve Existing Functionality:
+
+Instruction: "Maintain the original functionality and structure of the code except for the requested changes."
+Purpose: Ensures that existing features remain unaffected.
+Integrate Without Redundancy:
+
+Instruction: "Integrate the new functionality seamlessly without duplicating existing code or creating conflicts."
+Purpose: Avoids redundancy and potential code conflicts.
+Error-Free Integration:
+
+Instruction: "Ensure that the modified code is syntactically correct and free of errors."
+Purpose: Prevents introducing bugs or syntax issues.
+Use Provided Resources Only:
+
+Instruction: "Base all changes solely on the code and resources I provide; do not assume or create additional dependencies."
+Purpose: Keeps modifications within the scope of provided materials.
+Detailed Explanation Upon Request:
+
+Instruction: "Provide explanations only if I specifically ask for them; otherwise, focus solely on the code changes."
+Purpose: Keeps responses concise and relevant to the task.
+Maintain File Integrity:
+
+Instruction: "When providing the updated code, present the entire file with only the necessary changes applied."
+Purpose: Ensures clarity by showing the complete file context with minimal alterations.
+No Structural Overhauls:
+
+Instruction: "Avoid restructuring or reorganizing the code unless explicitly requested."
+Purpose: Prevents major changes that can affect the application's behavior.
+Confirm Understanding Before Proceeding:
+
+Instruction: "Before making changes, confirm that you understand which part of the code to modify."
+Purpose: Reduces misunderstandings and ensures alignment on the task.

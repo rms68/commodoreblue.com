@@ -1,0 +1,68 @@
+/* styles/global.css */
+
+/* Reset and Variables */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-64body: #3e31a1; /* Blue-violet */
+    --color-64border: #7c71da; /* Light purple */
+    --color-menufont: #7c71da;
+    --color-menuback: #3e31a1;
+    --color-green: #008000;
+    --color-yellow: #ffff00;
+    --color-cyan: #00ffff;
+    --color-white: #ffffff;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'C64 Pro', monospace;
+    color: var(--color-white);
+}
+
+@font-face {
+    font-family: 'C64 Pro';
+    src: url('fonts/C64_Pro_Mono-STYLE.ttf');
+}
+
+/* Navigation Menu */
+#menu-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+#menu-container li {
+    margin: 0 20px;
+}
+
+#menu-container a {
+    text-decoration: none;
+    font-size: 2vh;
+    background-color: var(--color-64border);
+    color: var(--color-64body);
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+#menu-container a.active {
+    background-color: var(--color-white) !important;
+    color: var(--color-64border) !important;
+}
+
+#menu-container a:hover {
+    background-color: var(--color-64body);
+    color: var(--color-64border);
+}

@@ -1,0 +1,20 @@
+/* shop.css
+   Styles specific to the shop page.
+   Ecwid code styling can go here as well if needed.
+*/
+#shop-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#shop-page p {
+    font-size: 2vh;
+    color: #ffffff;
+}
+
+#my-store-108400041 {
+    margin-top: 20px;
+    /* Additional styling for Ecwid store if needed */
+}
